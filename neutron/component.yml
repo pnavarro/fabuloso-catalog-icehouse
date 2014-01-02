@@ -1,0 +1,30 @@
+name: neutron
+file: neutron.py
+description: Operations over neutron
+
+Services:
+    - name: install
+      description: Install neutron server and configure it
+      methods:
+          - install
+          - set_config_file
+          - configure_ovs_plugin_vlan
+          - start
+    - name: start
+      description: Start the neutron service
+      methods: 
+          - start
+    - name: configure_ml2_plugin_vlan
+      description: Configure the ml2 plugin vlan
+      methods:
+          - configure_ml2_plugin_vlan
+    - name: configure_ovs_plugin_vlan
+      description: Configures the Quantum Server to know the VLAN for OVS must be enabled
+      methods:
+          - configure_ovs_plugin_vlan
+    - name: validate
+      description: Validates cinder to operate with it
+      methods:
+          - validate_database
+          - validate_credentials
+          - validate_rabbitmq

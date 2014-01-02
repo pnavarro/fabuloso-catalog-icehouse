@@ -1,0 +1,25 @@
+name: swift_proxy
+file: swift_proxy.py
+description: OpenStack Object Storage (Swift) proxy
+
+Services:
+    - name: install
+      description: Installs an OpenStack's Swift proxy node
+      methods:
+        - install_proxy_packages
+        - install_proxy_config
+
+    - name: start
+      description: Starts the OpenStack's Swift proxy services
+      methods:
+        - start
+
+    - name: validate
+      description: Validates an OpenStack's Swift proxy node installation
+      methods:
+        - validate_proxy_config
+
+    - name: validate_started
+      description: Validates that the OpenStack's Swift proxy services are running
+      methods:
+        - validate_started

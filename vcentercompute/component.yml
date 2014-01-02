@@ -1,0 +1,15 @@
+name: vcentercompute
+file: vcentercompute.py
+description: Operations over Vcenter compute component
+
+Services:
+    - name: install
+      description: Install and configure component file
+      methods:
+          - install
+          - set_config_file
+          - start
+    - name: start
+      description: Start Nova-compute service
+      methods: 
+          - start

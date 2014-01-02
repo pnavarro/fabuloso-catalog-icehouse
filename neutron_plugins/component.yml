@@ -1,0 +1,52 @@
+name: neutron_plugins
+file: neutron_plugins.py
+description: Operations over neutron Plugins
+
+Services:
+    - name: install
+      description: Install and configure the neutron plugin
+      methods:
+          - compile_datapath
+          - install
+          - set_config_file
+          - configure_ovs_plugin_vlan
+          - configure_l3_agent
+          - configure_dhcp_agent
+          - configure_metadata_agent
+          - configure_lbaas_agent
+          - start
+    - name: configure_ovs_plugin_vlan
+      description: Configure the vlan for OpenVSwitch
+      methods:
+          - configure_ovs_plugin_vlan
+    - name: configure_ml2_plugin_vlan
+      description: Configure the ml2 plugin vlan
+      methods:
+          - configure_ml2_plugin_vlan
+    - name: configure_network_agents
+      description: Configures the network node agents
+      methods:
+          - configure_l3_agent
+          - configure_dhcp_agent
+          - configure_metadata_agent
+          - configure_lbaas_agent
+    - name: configure_fwaas_service
+      description: Configure the fwaas service
+      methods:
+          - configure_fwaas_service
+    - name: start
+      description: Starts the plugin
+      methods: 
+          - start
+    - name: configure_external_network
+      description: Configure the default external network
+      methods:
+          - configure_external_network
+    - name: configure_default_private_network
+      description: Configure the default private network
+      methods:
+          - configure_default_private_network
+    - name: configure_iptables
+      description: Configure iptables for public management
+      methods:
+          - configure_iptables

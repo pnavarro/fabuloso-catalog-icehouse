@@ -1,0 +1,37 @@
+name: compute
+file: compute.py
+description: Operations over Node Compute component
+
+Services:
+    - name: install
+      description: Install and configure component file
+      methods:
+          - install
+          - configure_ntp
+          - configure_vhost_net
+          - configure_libvirt
+          - configure_network
+          - set_config_file
+          - configure_neutron
+          - configure_ovs_plugin_vlan
+          - start
+    - name: configure_ovs_plugin_vlan
+      description: Configure the vlan for OpenVSwitch
+      methods:
+          - configure_ovs_plugin_vlan
+    - name: configure_ml2_plugin_vlan
+      description: Configure the ml2 plugin vlan
+      methods:
+          - configure_ml2_plugin_vlan
+    - name: configure_nfs_storage
+      description: Configure nova-compute for NFS storage
+      methods:
+          - configure_nfs_storage
+    - name: configure_network
+      description: Configure network
+      methods:
+          - configure_network
+    - name: start
+      description: Start Nova-compute service
+      methods: 
+          - start

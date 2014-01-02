@@ -1,0 +1,27 @@
+name: os
+file: os.py
+description: Basic operations over remote os
+
+Services:
+    - name: info
+      description: Returns OS remote info
+      methods:
+          - nameservers
+          - block_devices
+          - mounts
+    - name: change_hostname
+      description: Change the hostname of a remote host
+      methods:
+          - change_hostname
+    - name: dhcp_request
+      description: the remote node asks for an IP address
+      methods:
+          - dhcp_request
+    - name: install
+      description: Prepares remote system for a OS with StackOps deployment
+      methods:
+          - add_repos
+    - name: parted
+      description: make partition
+      methods:
+          - parted

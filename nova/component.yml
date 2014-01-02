@@ -1,0 +1,25 @@
+name: nova
+file: nova.py
+description: Operations over OpenStack Nova service
+     
+Services:
+    - name: install
+      description: Install OpenStack Nova from ubuntu packages
+      methods:
+          - install
+          - set_config_file
+          - start
+    - name: nova_properties
+      description: Set properties of the Nova service
+      methods:
+          - nova_properties
+    - name: start
+      description: Start Nova Service
+      methods:
+          - start
+    - name: validate
+      description: Validates nova to operate with it
+      methods:
+          - validate_database
+          - validate_credentials
+          - validate_rabbitmq

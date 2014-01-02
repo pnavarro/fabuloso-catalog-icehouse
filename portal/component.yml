@@ -1,0 +1,22 @@
+name: portal
+file: portal.py
+description: StackOps Portal Component
+
+Services:
+    - name: install
+      description: Install and Configure StackOps portal
+      methods:
+          - configure
+          - start
+    - name: start 
+      description: Start portal service
+      methods: 
+          - start
+    - name: stop
+      description: Stop portal service
+      methods:
+          - stop
+    - name: uninstall
+      description: Uninstall StackOps portal
+      methods:
+          - uninstall_ubuntu_packages
